@@ -4,10 +4,8 @@ import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Value;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Data

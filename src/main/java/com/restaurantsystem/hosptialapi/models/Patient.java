@@ -1,11 +1,6 @@
 package com.restaurantsystem.hosptialapi.models;
-import jakarta.annotation.Nonnull;
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
-import org.antlr.v4.runtime.misc.NotNull;
-import org.hibernate.annotations.NotFound;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
