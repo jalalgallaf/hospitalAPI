@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -19,7 +20,7 @@ public class Patient {
     @Column(name="last_name")
     String lastName;
     @Column(name="date_of_birth")
-    LocalDate DateOfBirth;
+    Date DateOfBirth;
     @Column(name="gender")
     String gender;
     @Column(name="contact_number ")
@@ -34,10 +35,6 @@ public class Patient {
     LocalDateTime createdAt;
     LocalDateTime updatedAt;
 
-    //relation
-    @OneToMany(mappedBy = "patient",cascade = CascadeType.ALL)
-    @JoinColumn(name = "appointment_id")
-    List<Appointment> appointment;
 
     // Auto operations
     @PrePersist

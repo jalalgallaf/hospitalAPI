@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -27,7 +28,7 @@ public class Staff {
     @Nonnull
     String role;
     @Column(name = "contact_number")
-    String contact_number;
+    String contactNumber;
     @Column(name="email")
     String email;
 
@@ -39,11 +40,6 @@ public class Staff {
 
     @Column(name="updated_at")
     LocalDateTime updated_at;
-
-    @OneToOne(mappedBy = "staff",cascade = CascadeType.ALL)
-    @JoinColumn(name = "appointment_id")
-    Appointment appointment;
-
 
     @PrePersist
     protected void onCreate(){
